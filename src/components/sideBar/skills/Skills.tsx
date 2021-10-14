@@ -8,8 +8,8 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
       {skills.map((skill) => {
         for (const [key, value] of Object.entries(skill)) {
           return (
-            <div className="container m-1">
-              <span>{key}</span>
+            <div className="p-0 mt-2">
+              <span className="m-1">{key}</span>
               <div className="progress" key={key}>
                 <div
                   className="progress-bar"
