@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Adwards from "./adwards/Adwards";
 import Information from "./info/Information";
 import Languages from "./lang/Lang";
+import SideBarSection from "./SideBarSection";
 import SideBarTitle from "./SideBarTitle";
 import Skills from "./skills/Skills";
 interface SideBarProps {}
@@ -9,7 +10,7 @@ interface SideBarProps {}
 const SideBar: FC<SideBarProps> = () => {
   return (
     <>
-      <div className="bg-info">
+      <aside className="bg-info">
         <Information
           name={"Евгенй"}
           surname={"Шут"}
@@ -18,32 +19,31 @@ const SideBar: FC<SideBarProps> = () => {
           linkedIn={""}
           eMail={"shutnikssspk@gmai.com"}
         />
-        <div>
-          <SideBarTitle title="Skills" />
-        </div>
-        <div>
-          <Skills
-            skills={[
-              { "TS/JS": 50 },
-              { "HTML/CSS": 70 },
-              { React: 60 },
-              { Redux: 60 },
-            ]}
-          />
-        </div>
-        <div className="mt-3">
-          <SideBarTitle title="Adwards" />
-        </div>
-        <div>
-          <Adwards />
-        </div>
-        <div className="mt-3">
-          <SideBarTitle title="Langueges" />
-        </div>
-        <div>
-          <Languages lang={[{ English: "B1" }]} />
-        </div>
-      </div>
+        <SideBarSection
+          id={"Skills"}
+          childFirst={<SideBarTitle title="Skills" />}
+          childSecond={
+            <Skills
+              skills={[
+                { "TS/JS": 50 },
+                { "HTML/CSS": 70 },
+                { React: 60 },
+                { Redux: 60 },
+              ]}
+            />
+          }
+        />
+        <SideBarSection
+          id={"Adwards"}
+          childFirst={<SideBarTitle title="Adwards" />}
+          childSecond={<Adwards />}
+        />
+        <SideBarSection
+          id={"Langueges"}
+          childFirst={<SideBarTitle title="Langueges" />}
+          childSecond={<Languages lang={[{ English: "B1" }]} />}
+        />
+      </aside>
     </>
   );
 };

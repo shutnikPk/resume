@@ -32,30 +32,31 @@ const Information: FC<InformationProps> = ({
           <span className="fs-5 text fw-bolder">
             {name} {surname}
           </span>
+          <p className="m-0">Minsk, Belarus</p>
         </div>
         <h2 className="fs-5">Contact me</h2>
         <div>
-          <a
-            className="row link-primary text-succsess"
-            href={"tel:" + { phone }}
-          >
+          <a className="row link-primary text-dark" href={"tel:" + { phone }}>
             {phone}
           </a>
           <a
-            className="row link-primary text-succsess fs-6"
+            className="row link-primary text-dark"
             href="https://telegram.me/Ashes_of_Ariandel"
+            target="_blank"
           >
             Telegram
           </a>
           <a
-            className="row link-primary text-succsess"
+            className="row link-primary text-dark"
             href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D1%88%D1%83%D1%82-3a1016198/"
+            target="_blank"
           >
             LikedIn
           </a>
           <a
-            className="row link-primary text-succsess"
+            className="row link-primary text-dark"
             href={`mailto:${eMail}`}
+            target="_blank"
           >
             GMail
           </a>
