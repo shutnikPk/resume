@@ -1,12 +1,13 @@
 import React, { FC } from "react";
-interface SkillsProps {
-  skills: { [key: string]: number }[];
+interface LanguagesProps {
+  lang: { [key: string]: string }[];
 }
-const Skills: FC<SkillsProps> = ({ skills }) => {
+
+const Languages: FC<LanguagesProps> = ({ lang }) => {
   return (
     <>
-      {skills.map((skill) => {
-        for (const [key, value] of Object.entries(skill)) {
+      {lang.map((l) => {
+        for (const [key, value] of Object.entries(l)) {
           return (
             <div className="p-0 m-1">
               <span className="m-1 fs-5 text fw-bolder">{key}</span>
@@ -14,12 +15,12 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  aria-valuenow={value}
+                  aria-valuenow={50}
                   aria-valuemin={0}
                   aria-valuemax={100}
-                  style={{ width: `${value}%` }}
+                  style={{ width: `${50}%` }}
                 >
-                  {value + "%"}
+                  {value}
                 </div>
               </div>
             </div>
@@ -30,4 +31,4 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
   );
 };
 
-export default Skills;
+export default Languages;

@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import React, { FC } from "react";
 interface InformationProps {
   name: string;
@@ -19,7 +18,7 @@ const Information: FC<InformationProps> = ({
 }) => {
   return (
     <>
-      <div className="container p-3 ContactInfo">
+      <div className="container m-2 ps-2 ContactInfo">
         <div>
           <div
             style={{
@@ -30,28 +29,34 @@ const Information: FC<InformationProps> = ({
               backgroundSize: "cover",
             }}
           ></div>
-          <span className="fs-4 text fw-bolder">
+          <span className="fs-5 text fw-bolder">
             {name} {surname}
           </span>
         </div>
-        <h2>Contact me</h2>
+        <h2 className="fs-5">Contact me</h2>
         <div>
-          <a className="row link-primary" href={"tel:" + { phone }}>
+          <a
+            className="row link-primary text-succsess"
+            href={"tel:" + { phone }}
+          >
             {phone}
           </a>
           <a
-            className="row link-primary"
+            className="row link-primary text-succsess fs-6"
             href="https://telegram.me/Ashes_of_Ariandel"
           >
             Telegram
           </a>
           <a
-            className="row link-primary"
+            className="row link-primary text-succsess"
             href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D1%88%D1%83%D1%82-3a1016198/"
           >
             LikedIn
           </a>
-          <a className="row link-primary" href={`mailto:${eMail}`}>
+          <a
+            className="row link-primary text-succsess"
+            href={`mailto:${eMail}`}
+          >
             GMail
           </a>
         </div>

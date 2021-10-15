@@ -5,9 +5,8 @@ interface SideBarTitleProps {
 
 const SideBarTitle: FC<SideBarTitleProps> = ({ title }) => {
   return (
-    <div className="bg-secondary row">
-      <span className="col-1">ic</span>
-      <span className="col-2 text-light justify-self-center">{title}</span>
+    <div className="bg-secondary m-1 mt-2 ps-1">
+      <span className=" text-light fw-bolder">{title}</span>
     </div>
   );
 };

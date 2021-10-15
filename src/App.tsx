@@ -6,9 +6,12 @@ import Header from "./components/commons/header/Header";
 function App() {
   return (
     <>
-      <div className="row d-flex" style={{ maxWidth: 750 }}>
+      <div
+        className="row d-flex justify-content-center"
+        style={{ maxWidth: 850 }}
+      >
         <Header />
-        <div className="col-3 bg-info">
+        <div className="col-3 p-2 bg-info">
           <SideBar />
         </div>
         <div className="col-9"></div>
