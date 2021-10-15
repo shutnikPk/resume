@@ -19,7 +19,7 @@ const Information: FC<InformationProps> = ({
   return (
     <>
       <div className="container m-2 ps-2 ContactInfo">
-        <div>
+        <section>
           <div
             style={{
               background: "url('./assets/me.jpg')",
@@ -33,9 +33,9 @@ const Information: FC<InformationProps> = ({
             {name} {surname}
           </span>
           <p className="m-0">Minsk, Belarus</p>
-        </div>
+        </section>
         <h2 className="fs-5">Contact me</h2>
-        <div>
+        <section>
           <a className="row link-primary text-dark" href={"tel:" + { phone }}>
             {phone}
           </a>
@@ -60,7 +60,7 @@ const Information: FC<InformationProps> = ({
           >
             GMail
           </a>
-        </div>
+        </section>
       </div>
     </>
   );

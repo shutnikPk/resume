@@ -10,12 +10,8 @@ function App() {
     <>
       <div className="row d-flex" style={{ maxWidth: 850 }}>
         <Header />
-        <div className="col-3 p-2 bg-info">
-          <SideBar />
-        </div>
-        <div className="col-9">
-          <Main />
-        </div>
+        <SideBar />
+        <Main />
       </div>
     </>
   );
