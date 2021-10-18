@@ -4,16 +4,14 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import SideBar from "./components/sideBar/SideBar";
 import Header from "./components/commons/header/Header";
 import Main from "./components/main/Main";
-import Footer from "./components/commons/footer/Footer";
 
 function App() {
   return (
     <>
-      <div className="row d-flex" style={{ maxWidth: 850 }}>
+      <div className="row d-flex" style={{ maxWidth: 850, height: 100 + "vh" }}>
         <Header />
         <SideBar />
         <Main />
-        <Footer />
       </div>
     </>
   );
