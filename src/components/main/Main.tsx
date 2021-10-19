@@ -1,27 +1,16 @@
 import React, { FC, useState } from "react";
-import MainEducation from "./education/MainEducation";
 import MainSection from "./mainSection/MainSection";
-import MainTitle from "./mainTitle/MainTitle";
+
 interface MainProps {}
 
 const Main: FC<MainProps> = () => {
-  const [disp, setDisp] = useState<string>("block");
-  const [arrowDir, setArrowDir] = useState<string>("down");
-  const clickHandler = (): void => {
-    console.log("ASD");
-    if (disp === "none") {
-      setDisp("block");
-      setArrowDir("down");
-    } else {
-      setDisp("none");
-      setArrowDir("up");
-    }
-  };
   return (
     <main className="col-9 p-2">
       <MainSection
-        firstChild={<MainTitle title={"Education"} arrowDir={"down"} />}
-        secondChild={<MainEducation disp={"block"} />}
+        title={"Education"}
+        content={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
       />
       <div></div>
       <div></div>
