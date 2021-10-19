@@ -1,20 +1,31 @@
 import React, { FC, useState } from "react";
 import MainSection from "./mainSection/MainSection";
 
-interface MainProps {}
+interface MainProps {
+  data: any;
+}
 
-const Main: FC<MainProps> = () => {
+const Main: FC<MainProps> = ({ data }) => {
   return (
     <main className="col-9 p-2">
       <MainSection
-        title={"Education"}
-        content={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        }
+        title={data.education.title}
+        content={data.education.content}
       />
-      <div></div>
-      <div></div>
-      <div></div>
+      <MainSection
+        title={data.expirience.title}
+        content={data.expirience.content}
+      />
+      <MainSection
+        title={data.nonRelevantExpirience.title}
+        content={data.nonRelevantExpirience.content}
+        hidenContent={data.nonRelevantExpirience.hidenContent}
+      />
+      <MainSection
+        title={data.topProjects.title}
+        content={data.topProjects.content}
+        hidenContent={data.topProjects.hidenContent}
+      />
     </main>
   );
 };

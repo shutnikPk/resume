@@ -2,13 +2,21 @@ import React, { FC, useState } from "react";
 interface MainSectionProps {
   title: string;
   content: string;
+  hidenContent?: boolean;
 }
 
-const MainSection: FC<MainSectionProps> = ({ title, content }) => {
-  const [display, setDisplay] = useState<string>("block");
-  const [arrowDir, setArrowDir] = useState<string>("down");
+const MainSection: FC<MainSectionProps> = ({
+  title,
+  content,
+  hidenContent,
+}) => {
+  const [display, setDisplay] = useState<string>(
+    hidenContent ? "none" : "block"
+  );
+  const [arrowDir, setArrowDir] = useState<string>(
+    hidenContent ? "up" : "down"
+  );
   const clickHandler = (): void => {
-    console.log("ASD");
     if (display === "none") {
       setDisplay("block");
       setArrowDir("down");
@@ -18,8 +26,12 @@ const MainSection: FC<MainSectionProps> = ({ title, content }) => {
     }
   };
   return (
-    <section onClick={clickHandler}>
-      <p className="d-flex bg-secondary justify-content-between fs-3 p-1 m-1">
+    <section>
+      <p
+        style={{ cursor: "pointer" }}
+        onClick={clickHandler}
+        className="d-flex bg-secondary justify-content-between fs-3 p-1 m-1"
+      >
         <span> {title} </span>
         <span>
           <i
