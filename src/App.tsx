@@ -9,7 +9,10 @@ import data from "./API/api";
 function App() {
   let appData = data;
   return (
-    <div className="row d-flex" style={{ maxWidth: 850, height: 100 + "vh" }}>
+    <div
+      className="row d-flex  bg-white"
+      style={{ maxWidth: 850, height: 100 + "vh" }}
+    >
       <Header />
       <SideBar />
       <Main data={appData.en} />
