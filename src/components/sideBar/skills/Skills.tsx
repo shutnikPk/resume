@@ -8,11 +8,11 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
       {skills.map((skill) => {
         for (const [key, value] of Object.entries(skill)) {
           return (
-            <div className="p-0 m-1" key={key}>
-              <span className="m-1 fs-5 text fw-bolder">{key}</span>
-              <div className="progress" key={key}>
+            <div className="" key={key}>
+              <span className="">{key}</span>
+              <div className="" key={key}>
                 <div
-                  className="progress-bar"
+                  className=""
                   role="progressbar"
                   aria-valuenow={value}
                   aria-valuemin={0}

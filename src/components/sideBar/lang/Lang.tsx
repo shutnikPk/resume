@@ -9,11 +9,11 @@ const Languages: FC<LanguagesProps> = ({ lang }) => {
       {lang.map((l) => {
         for (const [key, value] of Object.entries(l)) {
           return (
-            <div className="p-0 m-1" key={key}>
-              <span className="m-1 fs-5 text fw-bolder">{key}</span>
-              <div className="progress" key={key}>
+            <div className="" key={key}>
+              <span className="">{key}</span>
+              <div className="" key={key}>
                 <div
-                  className="progress-bar"
+                  className=""
                   role="progressbar"
                   aria-valuenow={50}
                   aria-valuemin={0}

@@ -27,11 +27,7 @@ const MainSection: FC<MainSectionProps> = ({
   };
   return (
     <section>
-      <p
-        style={{ cursor: "pointer" }}
-        onClick={clickHandler}
-        className="d-flex bg-secondary justify-content-between fs-3 p-1 m-1"
-      >
+      <p style={{ cursor: "pointer" }} onClick={clickHandler} className="">
         <span> {title} </span>
         <span>
           <i

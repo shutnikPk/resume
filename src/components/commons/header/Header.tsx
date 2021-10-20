@@ -3,7 +3,7 @@ interface HeaderProps {}
 const Header: FC<HeaderProps> = () => {
   return (
     <>
-      <header className="container bg-dark d-flex p-3">
+      <header className="">
         <h1 className="">
           <a
             href="https://github.com/shutnikPk"
@@ -14,12 +14,12 @@ const Header: FC<HeaderProps> = () => {
             <i className="fa fa-github"></i>
           </a>
         </h1>
-        <div className="text-white p-3 ms-auto">
-          <span className="col p-0" style={{ cursor: "pointer" }}>
+        <div className="">
+          <span className="" style={{ cursor: "pointer" }}>
             <u>RU</u>
           </span>
-          <span className="col m-1"> / </span>
-          <span className="col p-0" style={{ cursor: "pointer" }}>
+          <span className=""> / </span>
+          <span className="" style={{ cursor: "pointer" }}>
             <u>EN</u>
           </span>
         </div>

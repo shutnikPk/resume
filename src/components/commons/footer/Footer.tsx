@@ -3,7 +3,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <footer className="bg-primary">
+    <footer className="">
       <p>This is the end</p>
     </footer>
   );

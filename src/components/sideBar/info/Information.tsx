@@ -18,7 +18,7 @@ const Information: FC<InformationProps> = ({
 }) => {
   return (
     <>
-      <div className="container m-2 ps-2 ContactInfo">
+      <div className="">
         <section>
           <div
             style={{
@@ -29,12 +29,12 @@ const Information: FC<InformationProps> = ({
               backgroundSize: "cover",
             }}
           ></div>
-          <span className="fs-5 text fw-bolder">
+          <span className="">
             {name} {surname}
           </span>
-          <p className="m-0">Minsk, Belarus</p>
+          <p className="">Minsk, Belarus</p>
         </section>
-        <h2 className="fs-5">Contact me</h2>
+        <h2 className="">Contact me</h2>
         <section>
           <a className="row link-primary text-dark" href={"tel:" + { phone }}>
             {phone}
