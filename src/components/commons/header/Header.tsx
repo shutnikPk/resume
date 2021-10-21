@@ -1,31 +1,56 @@
 import React, { FC } from "react";
-interface HeaderProps {}
-const Header: FC<HeaderProps> = () => {
+import { Layout, Menu, Breadcrumb, Row, Col } from "antd";
+import {
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+} from "@ant-design/icons";
+
+const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
+
+interface HeaderComponentProps {}
+const HeaderComponent: FC<HeaderComponentProps> = () => {
   return (
     <>
-      <header className="">
-        <h1 className="">
-          <a
-            href="https://github.com/shutnikPk"
-            target="_blank"
-            className="text-decoration-none text-white fs-1"
-          >
-            Junior/Junior+ FrontEnd Developer (React+TypeScript){" "}
-            <i className="fa fa-github"></i>
-          </a>
-        </h1>
-        <div className="">
-          <span className="" style={{ cursor: "pointer" }}>
-            <u>RU</u>
-          </span>
-          <span className=""> / </span>
-          <span className="" style={{ cursor: "pointer" }}>
-            <u>EN</u>
-          </span>
-        </div>
-      </header>
+      <Layout>
+        <Header className="header">
+          <Row justify="space-between">
+            <Col span={8}>
+              <div className="logo">
+                <h1>
+                  <a href="https://github.com/shutnikPk" className="brand-logo">
+                    Junior/Trainee FrontEnd Developer{" "}
+                    <i className="fa fa-github"></i>
+                  </a>
+                </h1>
+              </div>
+            </Col>
+            <Col span={3}>
+              <Menu
+                theme="dark"
+                className="col"
+                mode="horizontal"
+                defaultSelectedKeys={["2"]}
+              >
+                <Menu.Item key="1">
+                  <span className="" style={{ cursor: "pointer" }}>
+                    <u>RU</u>
+                  </span>
+                </Menu.Item>
+                {/* <span className=""> / </span> */}
+                <Menu.Item key="2">
+                  <span className="" style={{ cursor: "pointer" }}>
+                    <u>EN</u>
+                  </span>
+                </Menu.Item>
+              </Menu>
+            </Col>
+          </Row>
+        </Header>
+      </Layout>
     </>
   );
 };
 
-export default Header;
+export default HeaderComponent;

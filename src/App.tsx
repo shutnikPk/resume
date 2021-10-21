@@ -1,18 +1,19 @@
 import "antd/dist/antd.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-import SideBar from "./components/sideBar/SideBar";
-import Header from "./components/commons/header/Header";
+import SideBarComponent from "./components/sideBar/SideBar";
+import HeaderComponent from "./components/commons/header/Header";
 import Main from "./components/main/Main";
 import data from "./API/api";
+import { Layout } from "antd";
 
 function App() {
   let appData = data;
   return (
-    <div className="" style={{ maxWidth: 850, height: 100 + "vh" }}>
-      <Header />
-      <SideBar />
+    <Layout>
+      <HeaderComponent />
+      <SideBarComponent />
       <Main data={appData.en} />
-    </div>
+    </Layout>
   );
 }
 

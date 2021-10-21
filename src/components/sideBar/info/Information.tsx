@@ -20,7 +20,7 @@ const Information: FC<InformationProps> = ({
     <>
       <div className="">
         <section>
-          <div
+          {/* <div
             style={{
               background: "url('./assets/me.jpg')",
               width: 150,
@@ -28,7 +28,7 @@ const Information: FC<InformationProps> = ({
               borderRadius: 75,
               backgroundSize: "cover",
             }}
-          ></div>
+          ></div> */}
           <span className="">
             {name} {surname}
           </span>
@@ -36,28 +36,24 @@ const Information: FC<InformationProps> = ({
         </section>
         <h2 className="">Contact me</h2>
         <section>
-          <a className="row link-primary text-dark" href={"tel:" + { phone }}>
+          <a className="" href={"tel:" + { phone }}>
             {phone}
           </a>
           <a
-            className="row link-primary text-dark"
+            className=""
             href="https://telegram.me/Ashes_of_Ariandel"
             target="_blank"
           >
             Telegram
           </a>
           <a
-            className="row link-primary text-dark"
+            className=""
             href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D1%88%D1%83%D1%82-3a1016198/"
             target="_blank"
           >
             LikedIn
           </a>
-          <a
-            className="row link-primary text-dark"
-            href={`mailto:${eMail}`}
-            target="_blank"
-          >
+          <a className="" href={`mailto:${eMail}`} target="_blank">
             GMail
           </a>
         </section>
