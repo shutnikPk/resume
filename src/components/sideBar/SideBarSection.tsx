@@ -10,7 +10,7 @@ const SideBarSection: FC<SideBarSectionProps> = ({
   childSecond,
 }) => {
   return (
-    <section className="mt-3">
+    <section className="sideBar-section">
       {childFirst}
       {childSecond}
     </section>

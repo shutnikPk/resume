@@ -1,3 +1,5 @@
+import { Progress, Row } from "antd";
+import Text from "antd/lib/typography/Text";
 import React, { FC } from "react";
 interface LanguagesProps {
   lang: { [key: string]: string }[];
@@ -9,21 +11,13 @@ const Languages: FC<LanguagesProps> = ({ lang }) => {
       {lang.map((l) => {
         for (const [key, value] of Object.entries(l)) {
           return (
-            <div className="" key={key}>
-              <span className="">{key}</span>
-              <div className="" key={key}>
-                <div
-                  className=""
-                  role="progressbar"
-                  aria-valuenow={50}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: `${50}%` }}
-                >
-                  {value}
-                </div>
-              </div>
+          <Row className="row-justify-center">
+            <div className="progress-component" style={{ width: 110 }}>
+              <Text>{key}</Text>
+              <Progress percent={50} showInfo={false} size="small" /><span>{value}</span>
             </div>
+          </Row>
+
           );
         }
       })}

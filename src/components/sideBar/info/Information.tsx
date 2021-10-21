@@ -17,18 +17,11 @@ const Information: FC<InformationProps> = ({
   phone,
   eMail,
 }) => {
-  return (<>
-  <Row justify="center">
+  return (<>  
+  <Col>
+  <Row>
         <section>
-           <div className="avatar"
-            style={{
-              background: "url('./assets/me.jpg')",
-              width: 150,
-              height: 150,
-              borderRadius: 75,
-              backgroundSize: "cover",
-            }}
-          ></div>
+          <div className="avatar"/>
           <h3 className="h3">
             {name} {surname}
           </h3>
@@ -38,7 +31,7 @@ const Information: FC<InformationProps> = ({
   <Row>
     <h2 className="h4">Contact me</h2>
   </Row>
-  <Space direction={"horizontal"} size={20}>
+
         <section>
         <Row>
           <a className="" href={`tel: ${ phone }`}>
@@ -69,7 +62,7 @@ const Information: FC<InformationProps> = ({
           </a>
           </Row>
         </section>
-  </Space>
+        </Col>
 </>
   );
 };

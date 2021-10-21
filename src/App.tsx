@@ -10,15 +10,19 @@ function App() {
   let appData = data;
   return (
     <Layout>
-      <HeaderComponent />
-      <Row>
-        <Col span={4}>
-          <SideBarComponent />
+        <Col>
+          <Row>
+            <HeaderComponent />
+          </Row>
+          <Row>
+            <Col md={4} sm={24} style={{flex:"1 0 0"}}>
+              <SideBarComponent />
+            </Col>
+            <Col md={20} sm={24}>
+              <Main data={appData.en} />
+            </Col>
+          </Row>
         </Col>
-        <Col span={20}>
-          <Main data={appData.en} />
-        </Col>
-      </Row>
     </Layout>
   );
 }

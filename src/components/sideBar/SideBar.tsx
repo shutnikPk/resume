@@ -1,3 +1,4 @@
+import { Col, Row } from "antd";
 import React, { FC } from "react";
 import Adwards from "./adwards/Adwards";
 import Information from "./info/Information";
@@ -39,8 +40,8 @@ const SideBarComponent: FC<SideBarComponent> = () => {
         childSecond={<Adwards />}
       />
       <SideBarSection
-        id={"Langueges"}
-        childFirst={<SideBarTitle title="Langueges" />}
+        id={"Languages"}
+        childFirst={<SideBarTitle title="Languages" />}
         childSecond={<Languages lang={[{ English: "B1" }]} />}
       />
     </aside>

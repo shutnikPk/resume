@@ -1,21 +1,43 @@
 #root{
-    background-color: #eeeeee;
+    background-color: #bdbdbd;
     height: 100vh;
 }
 h1{
     font-size: 20pt;
 }
+.avatar{
+    background: url('./assets/me.jpg');
+              width: 150px;
+              height: 150px;
+              border-radius: 75px;
+              background-size: cover;
+}
 .sideBar-component{
-    background-color: #87b1d4;
+    
+    background-color: #bdbdbd;
     padding: 15px;
 }
+.sideBar-section{
+    margin: 10px 0;
+}
 @media (max-width: 950px){
-    .avatar{
-        display: none;
-    }
     .main-text{
         display: none;
     }
+    .row-justify-center{
+        justify-content: center;
+    }
+    .avatar{
+        background: url('./assets/me.jpg');
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 50px;
+                  background-size: cover;
+    }
+}
+
+@media (max-width: 650px){
+
 }
 
 /* @media (min-width: 950px){
