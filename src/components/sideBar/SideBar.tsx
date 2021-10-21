@@ -10,7 +10,7 @@ interface SideBarComponent {}
 
 const SideBarComponent: FC<SideBarComponent> = () => {
   return (
-    <aside className="col-3 bg-info">
+    <aside className="sideBar-component">
       <Information
         name={"Евгенй"}
         surname={"Шут"}

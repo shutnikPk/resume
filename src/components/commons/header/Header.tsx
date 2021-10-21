@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import { Layout, Menu, Row, Col } from "antd";
-
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Header } = Layout;
 
 interface HeaderComponentProps {}
 const HeaderComponent: FC<HeaderComponentProps> = () => {
@@ -11,11 +9,13 @@ const HeaderComponent: FC<HeaderComponentProps> = () => {
       <Layout>
         <Header className="header">
           <Row justify="space-between">
-            <Col span={8}>
+            <Col span={14}>
               <div className="logo">
                 <h1>
-                  <a href="https://github.com/shutnikPk" className="brand-logo">
+                  <a href="https://github.com/shutnikPk" className="main-text">
                     Junior/Trainee FrontEnd Developer{" "}
+                  </a>
+                  <a href="https://github.com/shutnikPk" className="git-icon">
                     <i className="fa fa-github"></i>
                   </a>
                 </h1>

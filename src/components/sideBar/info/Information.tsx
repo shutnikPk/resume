@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Layout, Menu, Row, Col, Space } from "antd";
 interface InformationProps {
   name: string;
   surname: string;
@@ -16,11 +17,10 @@ const Information: FC<InformationProps> = ({
   phone,
   eMail,
 }) => {
-  return (
-    <>
-      <div className="">
+  return (<>
+  <Row justify="center">
         <section>
-          {/* <div
+           <div className="avatar"
             style={{
               background: "url('./assets/me.jpg')",
               width: 150,
@@ -28,37 +28,49 @@ const Information: FC<InformationProps> = ({
               borderRadius: 75,
               backgroundSize: "cover",
             }}
-          ></div> */}
-          <span className="">
+          ></div>
+          <h3 className="h3">
             {name} {surname}
-          </span>
-          <p className="">Minsk, Belarus</p>
+          </h3>
+          <h5 className="">Minsk, Belarus</h5>
         </section>
-        <h2 className="">Contact me</h2>
+  </Row>
+  <Row>
+    <h2 className="h4">Contact me</h2>
+  </Row>
+  <Space direction={"horizontal"} size={20}>
         <section>
-          <a className="" href={"tel:" + { phone }}>
+        <Row>
+          <a className="" href={`tel: ${ phone }`}>
             {phone}
           </a>
+        </Row>
+        <Row>
           <a
             className=""
             href="https://telegram.me/Ashes_of_Ariandel"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             Telegram
           </a>
+          </Row>
+          <Row>
           <a
             className=""
             href="https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D1%88%D1%83%D1%82-3a1016198/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             LikedIn
           </a>
-          <a className="" href={`mailto:${eMail}`} target="_blank">
+          </Row>
+          <Row>
+          <a className="" href={`mailto:${eMail}`} target="_blank" rel="noreferrer">
             GMail
           </a>
+          </Row>
         </section>
-      </div>
-    </>
+  </Space>
+</>
   );
 };
 

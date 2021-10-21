@@ -1,0 +1,25 @@
+#root{
+    background-color: #eeeeee;
+    height: 100vh;
+}
+h1{
+    font-size: 20pt;
+}
+.sideBar-component{
+    background-color: #87b1d4;
+    padding: 15px;
+}
+@media (max-width: 950px){
+    .avatar{
+        display: none;
+    }
+    .main-text{
+        display: none;
+    }
+}
+
+/* @media (min-width: 950px){
+    .git-icon{
+        display: none;
+    }
+} */
