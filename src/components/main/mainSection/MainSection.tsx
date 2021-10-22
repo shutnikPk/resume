@@ -27,7 +27,11 @@ const MainSection: FC<MainSectionProps> = ({
   };
   return (
     <section>
-      <p style={{ cursor: "pointer" }} onClick={clickHandler} className="">
+      <p
+        style={{ cursor: "pointer" }}
+        onClick={clickHandler}
+        className="main-title"
+      >
         <span> {title} </span>
         <span>
           <i

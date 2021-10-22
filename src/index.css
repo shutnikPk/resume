@@ -1,45 +1,62 @@
-#root{
-    background-color: #bdbdbd;
-    height: 100vh;
+#root {
+  background-color: #bdbdbd;
+  height: 100vh;
 }
-h1{
-    font-size: 20pt;
+h1 {
+  font-size: 20pt;
 }
-.avatar{
-    background: url('./assets/me.jpg');
-              width: 150px;
-              height: 150px;
-              border-radius: 75px;
-              background-size: cover;
+.progress-component {
+  width: 120px;
 }
-.sideBar-component{
-    
-    background-color: #bdbdbd;
-    padding: 15px;
+.avatar {
+  background: url("./assets/me.jpg");
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-size: cover;
 }
-.sideBar-section{
-    margin: 10px 0;
+.sideBar-component {
+  background-color: #bdbdbd;
+  padding: 15px;
 }
-@media (max-width: 950px){
-    .main-text{
-        display: none;
-    }
-    .row-justify-center{
-        justify-content: center;
-    }
-    .avatar{
-        background: url('./assets/me.jpg');
-                  width: 100px;
-                  height: 100px;
-                  border-radius: 50px;
-                  background-size: cover;
-    }
+.sideBar-section {
+  margin: 10px 0;
+}
+.contact-link {
+  margin: 2px;
+}
+@media (max-width: 950px) {
+  .main-text {
+    display: none;
+  }
+  .row-justify-center {
+    justify-content: center;
+  }
+  /* .avatar {
+    background: url("./assets/me.jpg");
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-size: cover;
+  } */
 }
 
-@media (max-width: 650px){
-
+@media (max-width: 650px) {
+  .progress-component {
+    width: 200px;
+  }
 }
-
+p {
+  margin: 2px;
+}
+main {
+  padding-left: 10px;
+}
+.main-title {
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 16pt;
+}
 /* @media (min-width: 950px){
     .git-icon{
         display: none;

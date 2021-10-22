@@ -1,4 +1,4 @@
-import { Progress, Row } from "antd";
+import { Progress, Row, Col } from "antd";
 import Text from "antd/lib/typography/Text";
 import React, { FC } from "react";
 interface LanguagesProps {
@@ -11,13 +11,14 @@ const Languages: FC<LanguagesProps> = ({ lang }) => {
       {lang.map((l) => {
         for (const [key, value] of Object.entries(l)) {
           return (
-          <Row className="row-justify-center">
-            <div className="progress-component" style={{ width: 110 }}>
-              <Text>{key}</Text>
-              <Progress percent={50} showInfo={false} size="small" /><span>{value}</span>
-            </div>
-          </Row>
-
+            <Row key={key} className="row-justify-center">
+                <div className="progress-component">
+                  <Text>
+                    {key}, {value}
+                  </Text>
+                  <Progress percent={50} showInfo={false} size="small" />
+                </div>
+            </Row>
           );
         }
       })}
